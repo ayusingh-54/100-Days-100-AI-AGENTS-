@@ -1,0 +1,24 @@
+.env
+.idea/
+.vscode/
+__pycache__/
+*.py[cod]
+*$py.class
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+.venv/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
