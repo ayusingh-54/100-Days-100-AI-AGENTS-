@@ -4,12 +4,12 @@ Chatbot Simulation Streamlit Application
 A beautiful web interface for simulating and evaluating chatbot conversations.
 
 Features:
-- 🤖 AI-powered chatbot simulation
-- 👤 Virtual customer testing
-- 📊 Conversation analysis
-- 💾 Export capabilities
-- 🎯 Predefined scenarios
-- 📈 Real-time visualization
+🤖 AI-powered chatbot simulation
+👤 Virtual customer testing
+ 📊 Conversation analysis
+💾 Export capabilities
+🎯 Predefined scenarios
+📈 Real-time visualization
 
 Author: AI Assistant
 Date: October 2025
