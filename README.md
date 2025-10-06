@@ -484,9 +484,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### Connect
 
-- 💼 LinkedIn: [Your Profile]
+- 💼 LinkedIn: [@ayush-singh54](https://www.linkedin.com/in/ayush-singh54/)
 - 🐱 GitHub: [@ayusingh-54](https://github.com/ayusingh-54)
-- 🌐 Website: [Your Website]
+
 
 ---
 
