@@ -1,3 +1,62 @@
+# Vibe Matcher – Mini Recommender Prototype
+
+A compact prototype that matches a short text “vibe” query to fashion products using OpenAI embeddings and cosine similarity. It's designed to be Colab-friendly and runnable locally.
+
+Repository structure
+
+```
+.
+├── README.md
+├── requirements.txt
+├── notebooks/
+│   └── vibe_matcher.ipynb
+├── data/                # created at runtime; embeddings_cache.json will be saved here
+└── src/
+    ├── embeddings.py
+    ├── search.py
+    └── utils.py
+```
+
+Quick overview
+
+- Input: short vibe query (e.g. "energetic urban chic").
+- Products: small mock catalog (8–10 fashion items) with descriptions and manual vibe tags.
+- Embeddings: OpenAI `text-embedding-ada-002` used to embed product descriptions and queries.
+- Matching: cosine similarity (scikit-learn). Top-3 returned. Similarity values transformed to 0–1 range.
+- Thresholds: fallback threshold = 0.35, good hit threshold = 0.7 (constants in the notebook).
+
+Why AI at Nexora?
+
+AI at Nexora excites me because it's about applied ML that ships: small, explainable prototypes can rapidly inform product decisions, close the loop with user feedback, and turn ideas into measurable impact. A tiny system like Vibe Matcher demonstrates how rapid experimentation (embeddings + similarity search) yields fast, interpretable results that are easy to iterate on—exactly the product-focused, outcome-driven approach Nexora values.
+
+How to run
+
+Local (recommended):
+
+1. Create a Python 3.10+ venv and activate it.
+2. Install dependencies:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+3. Set your OpenAI API key (PowerShell):
+
+```powershell
+$env:OPENAI_API_KEY = 'sk-...'
+```
+
+Colab: open the notebook `notebooks/vibe_matcher.ipynb` in Colab and run the first cells; set the key with `os.environ['OPENAI_API_KEY']='sk-...'`.
+
+Notes and limits
+
+- The notebook will attempt to call OpenAI. If `OPENAI_API_KEY` is not set, the notebook includes a deterministic synthetic-embedding fallback so you can still run end-to-end tests locally without incurring API calls.
+- Caching: embeddings are cached to `data/embeddings_cache.json` to avoid repeated API calls.
+- Future work: Pinecone/FAISS for production vector DB, hybrid tag+vector retrieval, LLM-based reranking.
+
+Contact
+
+This prototype was generated as part of a mini-project. For changes, edit files under `src/` and re-run the notebook.
 # 🤖 100 Days - 100 AI Agents Challenge
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
