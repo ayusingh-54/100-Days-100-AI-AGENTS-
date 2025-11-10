@@ -11,30 +11,35 @@ An AI-powered fashion recommender that matches your style vibes with perfect pro
 ## 🌟 Features
 
 ### 🔍 **Smart Search**
+
 - Natural language vibe queries
 - Real-time AI-powered matching
 - Quick suggestion buttons
 - Intelligent query validation
 
 ### 📊 **Rich Visualizations**
+
 - Interactive score distribution charts
 - Latency tracking over time
 - Performance metrics dashboard
 - Beautiful product cards
 
 ### 📚 **Catalog Browser**
+
 - Filter by vibe tags
 - Search by product name
 - Full product details
 - Expandable product cards
 
 ### 📈 **Analytics Dashboard**
+
 - Search statistics
 - Score distribution analysis
 - Latency performance tracking
 - Fallback rate monitoring
 
 ### 📜 **Search History**
+
 - Complete search log
 - Repeat previous searches
 - Performance metrics per search
@@ -76,33 +81,38 @@ The app will open in your browser at `http://localhost:8501`
 ## 🎯 How to Use
 
 ### 1. **Search by Vibe**
-   - Enter your style vibe in natural language
-   - Examples:
-     - "energetic urban chic"
-     - "soft cozy loungewear"
-     - "boho festival earthy"
-   - Click **Search** or use quick suggestions
+
+- Enter your style vibe in natural language
+- Examples:
+  - "energetic urban chic"
+  - "soft cozy loungewear"
+  - "boho festival earthy"
+- Click **Search** or use quick suggestions
 
 ### 2. **View Results**
-   - See top-ranked products
-   - Check similarity scores
-   - Explore vibe tags
-   - Read full descriptions
+
+- See top-ranked products
+- Check similarity scores
+- Explore vibe tags
+- Read full descriptions
 
 ### 3. **Browse Catalog**
-   - Filter by vibe tags
-   - Search by name
-   - Explore all products
+
+- Filter by vibe tags
+- Search by name
+- Explore all products
 
 ### 4. **Analyze Performance**
-   - View search statistics
-   - Track score distributions
-   - Monitor latency trends
+
+- View search statistics
+- Track score distributions
+- Monitor latency trends
 
 ### 5. **Review History**
-   - See past searches
-   - Repeat successful queries
-   - Track your preferences
+
+- See past searches
+- Repeat successful queries
+- Track your preferences
 
 ---
 
@@ -111,24 +121,28 @@ The app will open in your browser at `http://localhost:8501`
 ### Main Tabs
 
 #### 🔍 **Search Tab**
+
 - Main search interface
 - Quick suggestion buttons
 - Real-time results with metrics
 - Score visualization
 
 #### 📚 **Catalog Browser Tab**
+
 - Full product listing
 - Multi-select vibe filters
 - Name search
 - Detailed product cards
 
 #### 📊 **Analytics Tab**
+
 - Performance metrics
 - Score distribution histogram
 - Latency trends
 - Recent searches table
 
 #### 📜 **History Tab**
+
 - Complete search log
 - Repeat search functionality
 - Performance per search
@@ -141,16 +155,19 @@ The app will open in your browser at `http://localhost:8501`
 ### Sidebar Settings
 
 **Display Options:**
+
 - Show/hide similarity scores
 - Show/hide full descriptions
 - Adjust number of results (1-10)
 
 **Statistics:**
+
 - Total products in catalog
 - Total searches performed
 - Unique vibe tags
 
 **Thresholds:**
+
 - Good Hit: ≥ 0.7
 - Fallback: < 0.35
 
@@ -180,6 +197,7 @@ aa/
 ### Backend (`vibe_matcher_backend.py`)
 
 **Functions:**
+
 - `initialize_embeddings()` - Load catalog and generate embeddings
 - `search_vibes()` - Complete search pipeline
 - `rank_by_similarity()` - Cosine similarity ranking
@@ -187,6 +205,7 @@ aa/
 - `get_metrics_summary()` - Calculate performance metrics
 
 **Data Structures:**
+
 - `RankedResult` - Dataclass for search results
 - Product catalog with 10 fashion items
 - Vibe tags for each product
@@ -194,6 +213,7 @@ aa/
 ### Frontend (`app.py`)
 
 **Features:**
+
 - Custom CSS styling
 - Session state management
 - Multiple tabs with rich content
@@ -210,6 +230,7 @@ aa/
 **Query:** `"energetic urban chic"`
 
 **Expected Results:**
+
 1. Urban Streetwear Bomber (Score: ~0.52)
 2. Tech Wear Cargo Pants (Score: ~0.51)
 3. Vintage Denim Jacket (Score: ~0.50)
@@ -223,6 +244,7 @@ aa/
 **Query:** `"soft cozy loungewear comfort"`
 
 **Expected Results:**
+
 1. Cozy Loungewear Bundle (Score: ~0.53)
 2. Minimalist Cashmere Sweater (Score: ~0.51)
 3. Sustainable Linen Set (Score: ~0.49)
@@ -236,6 +258,7 @@ aa/
 **Query:** `"boho festival earthy tribal"`
 
 **Expected Results:**
+
 1. Boho Maxi Dress (Score: ~0.54)
 2. Festival Fringe Top (Score: ~0.52)
 3. Sustainable Linen Set (Score: ~0.48)
@@ -302,6 +325,7 @@ background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
 ### Issue: "No module named 'streamlit'"
 
 **Solution:**
+
 ```powershell
 pip install -r requirements.txt
 ```
@@ -309,6 +333,7 @@ pip install -r requirements.txt
 ### Issue: "No module named 'plotly'"
 
 **Solution:**
+
 ```powershell
 pip install plotly
 ```
@@ -318,6 +343,7 @@ pip install plotly
 **Cause:** Using synthetic embeddings (no API key)
 
 **Solution:** Set `OPENAI_API_KEY` environment variable:
+
 ```powershell
 $env:OPENAI_API_KEY = 'sk-...'
 ```
@@ -325,6 +351,7 @@ $env:OPENAI_API_KEY = 'sk-...'
 ### Issue: App not loading
 
 **Solution:**
+
 ```powershell
 # Check if streamlit is installed
 streamlit --version
@@ -340,6 +367,7 @@ streamlit run app.py --logger.level=debug
 ### Deploy to Streamlit Cloud
 
 1. **Push to GitHub:**
+
    ```bash
    git add .
    git commit -m "Add Vibe Matcher Streamlit app"
@@ -347,6 +375,7 @@ streamlit run app.py --logger.level=debug
    ```
 
 2. **Deploy on Streamlit Cloud:**
+
    - Go to [share.streamlit.io](https://share.streamlit.io)
    - Connect your GitHub repo
    - Select `aa/app.py` as main file
@@ -360,6 +389,7 @@ streamlit run app.py --logger.level=debug
 ### Deploy to Heroku
 
 1. **Create `Procfile`:**
+
    ```
    web: streamlit run aa/app.py --server.port=$PORT
    ```
@@ -379,12 +409,14 @@ streamlit run app.py --logger.level=debug
 **Never commit API keys to GitHub!**
 
 **Local Development:**
+
 ```powershell
 # Use environment variable
 $env:OPENAI_API_KEY = 'sk-...'
 ```
 
 **Production:**
+
 - Use Streamlit Secrets
 - Use environment variables
 - Use secret management services
@@ -440,6 +472,7 @@ This project is part of the 100 Days - 100 AI Agents Challenge.
 ## 👨‍💻 Author
 
 **Ayush Singh**
+
 - GitHub: [@ayusingh-54](https://github.com/ayusingh-54)
 - LinkedIn: [@ayush-singh54](https://www.linkedin.com/in/ayush-singh54/)
 
@@ -457,6 +490,7 @@ This project is part of the 100 Days - 100 AI Agents Challenge.
 ## 📞 Support
 
 For issues or questions:
+
 - Open an issue on GitHub
 - Check the troubleshooting section
 - Review the documentation
@@ -465,4 +499,4 @@ For issues or questions:
 
 **Built with ❤️ for Nexora AI - Where prototypes become products, fast.**
 
-*Last Updated: November 10, 2025*
+_Last Updated: November 10, 2025_
