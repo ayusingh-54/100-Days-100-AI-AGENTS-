@@ -4,6 +4,8 @@ scikit-learn>=1.1
 openai>=0.27.0
 matplotlib>=3.5
 tqdm>=4.64
+plotly>=5.14.0
+streamlit>=1.28.0
 aiohappyeyeballs
 aiohttp
 aiosignal
