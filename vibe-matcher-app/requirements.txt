@@ -1,7 +1,0 @@
-# Core dependencies for Vibe Matcher Streamlit App
-pandas>=1.5.0
-numpy>=1.23.0
-scikit-learn>=1.1.0
-openai>=0.27.0
-plotly>=5.14.0
-streamlit>=1.28.0
