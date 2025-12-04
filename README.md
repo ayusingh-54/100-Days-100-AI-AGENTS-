@@ -14,6 +14,7 @@
 This is a **comprehensive open-source collection** of **AI agents**, **automation projects**, and **intelligent systems** built as part of the **"100 Days - 100 AI Agents"** challenge. Each project demonstrates practical applications of modern AI technologies including LLMs, embeddings, multi-agent systems, and retrieval-augmented generation (RAG).
 
 The repository showcases real-world implementations of cutting-edge AI/ML techniques with a focus on:
+
 - 🔄 **Multi-Agent Orchestration** (LangGraph, LangChain)
 - 🧠 **Large Language Models** (OpenAI GPT)
 - 📊 **Vector Embeddings & Search** (Semantic similarity)
@@ -26,6 +27,7 @@ The repository showcases real-world implementations of cutting-edge AI/ML techni
 ## 👨‍💻 Author
 
 **Ayush Singh**
+
 - 📧 Email: [ayusingh693@gmail.com](mailto:ayusingh693@gmail.com)
 - 🔗 GitHub: [@ayusingh-54](https://github.com/ayusingh-54)
 - 💼 LinkedIn: [@ayush-singh54](https://www.linkedin.com/in/ayush-singh54/)
@@ -35,11 +37,13 @@ The repository showcases real-world implementations of cutting-edge AI/ML techni
 ## 📚 Projects Overview
 
 ### 1. 🛎️ Customer Support Agent with LangGraph
+
 **`01_customer_support_agent_langgraph/`**
 
 A sophisticated multi-agent customer support system that intelligently handles, analyzes, and routes customer queries.
 
 **Key Features:**
+
 - Query categorization (Technical, Billing, General)
 - Sentiment analysis (Positive, Neutral, Negative)
 - Intelligent routing to specialized handlers
@@ -48,6 +52,7 @@ A sophisticated multi-agent customer support system that intelligently handles, 
 - Complete workflow visualization
 
 **Technologies:**
+
 - LangGraph (Multi-agent orchestration)
 - LangChain (LLM integration)
 - OpenAI GPT (NLP & reasoning)
@@ -55,6 +60,7 @@ A sophisticated multi-agent customer support system that intelligently handles, 
 - Python (Core logic)
 
 **Quick Start:**
+
 ```bash
 cd 01_customer_support_agent_langgraph
 pip install -r requirements.txt
@@ -63,6 +69,7 @@ streamlit run app.py
 ```
 
 **Use Cases:**
+
 - Enterprise customer service automation
 - Support ticket routing
 - Quality assurance for customer interactions
@@ -71,11 +78,13 @@ streamlit run app.py
 ---
 
 ### 2. 🔍 Search the Internet and Summarize
+
 **`02_search_the_internet_and_summarize/`**
 
 An intelligent web search and summarization agent that searches the internet for information and provides concise, relevant summaries.
 
 **Key Features:**
+
 - Real-time internet search capabilities
 - Multi-source information gathering
 - Intelligent text summarization
@@ -85,6 +94,7 @@ An intelligent web search and summarization agent that searches the internet for
 - Search history management
 
 **Technologies:**
+
 - DuckDuckGo Search API (Web search)
 - OpenAI GPT (Summarization & extraction)
 - LangChain (Agent orchestration)
@@ -92,6 +102,7 @@ An intelligent web search and summarization agent that searches the internet for
 - BeautifulSoup (Web scraping)
 
 **Quick Start:**
+
 ```bash
 cd 02_search_the_internet_and_summarize
 pip install -r requirements.txt
@@ -99,6 +110,7 @@ streamlit run app.py
 ```
 
 **Use Cases:**
+
 - Research automation
 - Market intelligence gathering
 - News aggregation and summarization
@@ -108,11 +120,13 @@ streamlit run app.py
 ---
 
 ### 3. 🤖 Chatbot Simulation & Evaluation
+
 **`03_chatbot-simulation-evaluation/`**
 
 A comprehensive framework for simulating conversations between multiple chatbots and evaluating their performance across various metrics.
 
 **Key Features:**
+
 - Multi-bot conversation simulation
 - Automated evaluation metrics
 - Performance benchmarking
@@ -122,6 +136,7 @@ A comprehensive framework for simulating conversations between multiple chatbots
 - Export & reporting capabilities
 
 **Technologies:**
+
 - LangChain (Bot frameworks)
 - OpenAI GPT (Conversation logic)
 - Pandas (Data analysis)
@@ -129,12 +144,14 @@ A comprehensive framework for simulating conversations between multiple chatbots
 - Jupyter Notebooks (Interactive development)
 
 **Quick Start:**
+
 ```bash
 cd 03_chatbot-simulation-evaluation
 jupyter notebook agent-simulation-evaluation.ipynb
 ```
 
 **Use Cases:**
+
 - Chatbot performance comparison
 - Quality assurance testing
 - Response consistency evaluation
@@ -144,11 +161,13 @@ jupyter notebook agent-simulation-evaluation.ipynb
 ---
 
 ### 4. 📝 Information Gathering with Prompting
+
 **`information-gather-prompting/`**
 
 An advanced system for extracting structured information from unstructured data using intelligent prompting strategies.
 
 **Key Features:**
+
 - Prompt engineering framework
 - Information extraction pipeline
 - Structured data generation
@@ -157,6 +176,7 @@ An advanced system for extracting structured information from unstructured data 
 - Output validation & verification
 
 **Technologies:**
+
 - OpenAI GPT (Core LLM)
 - Prompt engineering techniques
 - Chain-of-thought prompting
@@ -164,6 +184,7 @@ An advanced system for extracting structured information from unstructured data 
 - JSON schema validation
 
 **Quick Start:**
+
 ```bash
 cd information-gather-prompting
 pip install -r requirements.txt
@@ -171,6 +192,7 @@ streamlit run app.py
 ```
 
 **Use Cases:**
+
 - Data extraction from documents
 - Structured knowledge base creation
 - Report generation
@@ -180,11 +202,13 @@ streamlit run app.py
 ---
 
 ### 5. 👗 Vibe Matcher - AI-Powered Fashion Recommender
+
 **`vibe-matcher-app/`**
 
 An innovative AI-powered recommendation engine that matches style vibes to fashion products using embeddings and semantic similarity.
 
 **Key Features:**
+
 - Natural language vibe search
 - Semantic product matching
 - AI-powered embeddings (OpenAI)
@@ -195,6 +219,7 @@ An innovative AI-powered recommendation engine that matches style vibes to fashi
 - Performance metrics visualization
 
 **Technologies:**
+
 - OpenAI text-embedding-ada-002 (1536-dim embeddings)
 - scikit-learn (Cosine similarity)
 - Streamlit (Web application)
@@ -202,6 +227,7 @@ An innovative AI-powered recommendation engine that matches style vibes to fashi
 - Pandas & NumPy (Data manipulation)
 
 **Quick Start:**
+
 ```bash
 cd vibe-matcher-app
 pip install -r requirements.txt
@@ -210,11 +236,13 @@ streamlit run app.py
 ```
 
 **Live Demo:**
+
 - 🌐 Deployed on Streamlit Cloud
 - Search for style vibes like: "energetic urban chic", "soft cozy loungewear"
 - Get instant product recommendations
 
 **Use Cases:**
+
 - E-commerce product recommendation
 - Style personalization
 - Fashion AI assistant
@@ -297,12 +325,14 @@ streamlit run app.py
 ### Installation
 
 1. **Clone the Repository**
+
 ```bash
 git clone https://github.com/ayusingh-54/100-Days-100-AI-AGENTS-.git
 cd 100-Days-100-AI-AGENTS-
 ```
 
 2. **Create Virtual Environment**
+
 ```bash
 # Windows
 python -m venv venv
@@ -314,11 +344,13 @@ source venv/bin/activate
 ```
 
 3. **Install Dependencies (for all projects)**
+
 ```bash
 pip install pandas numpy scikit-learn openai streamlit plotly langchain langgraph jupyter
 ```
 
 4. **Set Up Environment Variables**
+
 ```bash
 # Create .env file
 cp .env.example .env
@@ -351,17 +383,17 @@ streamlit run app.py
 
 ### Core Technologies
 
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| **Python** | 3.10+ | Core programming language |
-| **OpenAI** | Latest | LLM and embeddings |
-| **LangChain** | 0.0.x+ | LLM framework & chains |
-| **LangGraph** | Latest | Multi-agent orchestration |
-| **Streamlit** | 1.28+ | Web application framework |
-| **Pandas** | 2.0+ | Data manipulation |
-| **NumPy** | 1.23+ | Numerical computing |
-| **Scikit-learn** | 1.1+ | ML algorithms |
-| **Plotly** | 5.14+ | Interactive visualizations |
+| Technology       | Version | Purpose                    |
+| ---------------- | ------- | -------------------------- |
+| **Python**       | 3.10+   | Core programming language  |
+| **OpenAI**       | Latest  | LLM and embeddings         |
+| **LangChain**    | 0.0.x+  | LLM framework & chains     |
+| **LangGraph**    | Latest  | Multi-agent orchestration  |
+| **Streamlit**    | 1.28+   | Web application framework  |
+| **Pandas**       | 2.0+    | Data manipulation          |
+| **NumPy**        | 1.23+   | Numerical computing        |
+| **Scikit-learn** | 1.1+    | ML algorithms              |
+| **Plotly**       | 5.14+   | Interactive visualizations |
 
 ### Key Libraries
 
@@ -389,34 +421,37 @@ requests>=2.28.0
 
 ## 📊 Feature Comparison
 
-| Feature | Project 1 | Project 2 | Project 3 | Project 4 | Project 5 |
-|---------|-----------|-----------|-----------|-----------|-----------|
-| **Multi-Agent** | ✅ | ✅ | ✅ | ❌ | ❌ |
-| **LLM Powered** | ✅ | ✅ | ✅ | ✅ | ❌* |
-| **Web UI** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Real-time** | ✅ | ✅ | ❌ | ✅ | ✅ |
-| **Analytics** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Deployment Ready** | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Feature              | Project 1 | Project 2 | Project 3 | Project 4 | Project 5 |
+| -------------------- | --------- | --------- | --------- | --------- | --------- |
+| **Multi-Agent**      | ✅        | ✅        | ✅        | ❌        | ❌        |
+| **LLM Powered**      | ✅        | ✅        | ✅        | ✅        | ❌\*      |
+| **Web UI**           | ✅        | ✅        | ✅        | ✅        | ✅        |
+| **Real-time**        | ✅        | ✅        | ❌        | ✅        | ✅        |
+| **Analytics**        | ✅        | ✅        | ✅        | ✅        | ✅        |
+| **Deployment Ready** | ✅        | ✅        | ✅        | ✅        | ✅        |
 
-*Project 5 uses embeddings instead of LLM reasoning
+\*Project 5 uses embeddings instead of LLM reasoning
 
 ---
 
 ## 🎯 Use Cases & Applications
 
 ### Enterprise Solutions
+
 - **Customer Support Automation** - Multi-tier customer service with intelligent routing
 - **Knowledge Management** - Automated information extraction and organization
 - **Research & Analysis** - Real-time intelligence gathering and summarization
 - **Quality Assurance** - Bot simulation and performance evaluation
 
 ### E-Commerce & Retail
+
 - **Product Recommendations** - AI-powered style matching
 - **Customer Engagement** - Conversational shopping assistants
 - **Inventory Intelligence** - Smart product discovery
 - **Personalization** - User preference learning
 
 ### Content & Publishing
+
 - **News Aggregation** - Automated summary generation
 - **Research Synthesis** - Multi-source information compilation
 - **Report Generation** - Structured data extraction
@@ -439,6 +474,7 @@ Each project includes comprehensive documentation:
 ## 🔐 Security & Best Practices
 
 ### API Key Management
+
 ```bash
 # Never commit API keys!
 # Use environment variables:
@@ -450,12 +486,14 @@ SEARCH_API_KEY=...
 ```
 
 ### Rate Limiting
+
 - Implement exponential backoff for API calls
 - Cache embeddings and results
 - Monitor quota usage
 - Use local fallbacks when available
 
 ### Data Privacy
+
 - No sensitive data in logs
 - Encrypt cached data
 - Clean up temporary files
@@ -470,32 +508,38 @@ We welcome contributions! Please follow these guidelines:
 ### Steps to Contribute
 
 1. **Fork the Repository**
+
 ```bash
 git clone https://github.com/your-username/100-Days-100-AI-AGENTS-.git
 ```
 
 2. **Create Feature Branch**
+
 ```bash
 git checkout -b feature/your-feature-name
 ```
 
 3. **Make Changes**
+
 - Write clean, documented code
 - Follow PEP 8 style guide
 - Add tests where applicable
 
 4. **Commit Changes**
+
 ```bash
 git commit -m "Add: Description of changes"
 git push origin feature/your-feature-name
 ```
 
 5. **Create Pull Request**
+
 - Describe changes clearly
 - Link relevant issues
 - Request review
 
 ### Contribution Guidelines
+
 - ✅ Follow PEP 8 style guide
 - ✅ Add docstrings to functions
 - ✅ Include type hints
@@ -510,6 +554,7 @@ git push origin feature/your-feature-name
 This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
 
 ### Apache 2.0 Summary
+
 - ✅ Commercial use allowed
 - ✅ Modification allowed
 - ✅ Distribution allowed
@@ -523,12 +568,14 @@ This project is licensed under the **Apache License 2.0** - see the [LICENSE](LI
 ## 🌟 Star History & Acknowledgments
 
 If you find this repository helpful, please consider:
+
 - ⭐ Starring the repository
 - 🔗 Sharing with others
 - 🤝 Contributing improvements
 - 💬 Providing feedback
 
 ### Technologies We Use
+
 - **OpenAI** - Leading LLM provider
 - **LangChain** - Excellent LLM framework
 - **Streamlit** - Fast web app development
@@ -539,6 +586,7 @@ If you find this repository helpful, please consider:
 ## 📞 Support & Contact
 
 ### Get Help
+
 - 📧 Email: [ayusingh693@gmail.com](mailto:ayusingh693@gmail.com)
 - 🐛 Issues: [GitHub Issues](https://github.com/ayusingh-54/100-Days-100-AI-AGENTS-/issues)
 - 💬 Discussions: [GitHub Discussions](https://github.com/ayusingh-54/100-Days-100-AI-AGENTS-/discussions)
@@ -566,6 +614,7 @@ A: Regularly! Follow for latest updates and features.
 ## 🗺️ Roadmap
 
 ### Upcoming Features
+
 - [ ] Advanced multi-modal agents
 - [ ] Vector database integration (Pinecone, Weaviate)
 - [ ] Enhanced performance analytics
@@ -576,6 +625,7 @@ A: Regularly! Follow for latest updates and features.
 - [ ] Kubernetes deployment guides
 
 ### New Projects Planned
+
 - [ ] Image-based recommendation system
 - [ ] Voice-based customer support
 - [ ] Real-time sentiment analysis
@@ -586,14 +636,14 @@ A: Regularly! Follow for latest updates and features.
 
 ## 📊 Statistics
 
-| Metric | Value |
-|--------|-------|
-| Total Projects | 5+ |
-| Lines of Code | 5000+ |
-| Jupyter Notebooks | 5 |
-| Streamlit Apps | 4 |
-| Supported Platforms | 3+ |
-| Python Version | 3.10+ |
+| Metric              | Value      |
+| ------------------- | ---------- |
+| Total Projects      | 5+         |
+| Lines of Code       | 5000+      |
+| Jupyter Notebooks   | 5          |
+| Streamlit Apps      | 4          |
+| Supported Platforms | 3+         |
+| Python Version      | 3.10+      |
 | Open Source License | Apache 2.0 |
 
 ---
@@ -601,16 +651,19 @@ A: Regularly! Follow for latest updates and features.
 ## 🎓 Learning Resources
 
 ### For Beginners
+
 - [LangChain Documentation](https://python.langchain.com/)
 - [Streamlit Getting Started](https://docs.streamlit.io/)
 - [OpenAI API Guide](https://platform.openai.com/docs/)
 
 ### Intermediate
+
 - [LangGraph Guide](https://python.langchain.com/docs/langgraph)
 - [Advanced Prompting](https://platform.openai.com/docs/guides/prompt-engineering)
 - [RAG Pattern](https://python.langchain.com/docs/use_cases/question_answering/)
 
 ### Advanced
+
 - [Multi-Agent Systems](https://arxiv.org/abs/2308.00352)
 - [Vector Embeddings](https://openai.com/blog/introducing-text-and-code-embeddings/)
 - [LLM Fine-tuning](https://platform.openai.com/docs/guides/fine-tuning)
@@ -620,6 +673,7 @@ A: Regularly! Follow for latest updates and features.
 ## 🎉 Success Stories
 
 This repository has been used by:
+
 - ✅ AI/ML enthusiasts learning agent development
 - ✅ Startups building AI products
 - ✅ Enterprises automating customer service
@@ -631,6 +685,7 @@ This repository has been used by:
 ## 📢 Updates & Announcements
 
 Follow for latest updates:
+
 - 🐙 GitHub: [@ayusingh-54](https://github.com/ayusingh-54)
 - 💼 LinkedIn: [@ayush-singh54](https://www.linkedin.com/in/ayush-singh54/)
 - 📧 Email: [ayusingh693@gmail.com](mailto:ayusingh693@gmail.com)
@@ -649,6 +704,7 @@ Follow for latest updates:
 ## 📋 Checklist for Using This Repository
 
 Before getting started:
+
 - [ ] Clone the repository
 - [ ] Create a virtual environment
 - [ ] Install dependencies
@@ -664,12 +720,14 @@ Before getting started:
 ## 💡 Tips & Best Practices
 
 ### Performance Optimization
+
 - Cache embeddings to reduce API calls
 - Use batch processing for multiple queries
 - Implement request throttling
 - Monitor API usage and costs
 
 ### Code Quality
+
 - Write clear, self-documenting code
 - Use type hints throughout
 - Add comprehensive docstrings
@@ -677,6 +735,7 @@ Before getting started:
 - Follow PEP 8 style
 
 ### Deployment
+
 - Use environment variables for secrets
 - Implement proper error handling
 - Add logging for debugging
@@ -707,9 +766,9 @@ If this repository helped you, consider giving it a ⭐ and sharing it with othe
 
 **Made with ❤️ by [Ayush Singh](mailto:ayusingh693@gmail.com)**
 
-*100 Days - 100 AI Agents | Building the Future of AI Automation*
+_100 Days - 100 AI Agents | Building the Future of AI Automation_
 
-*Last Updated: December 5, 2025*
+_Last Updated: December 5, 2025_
 
 </div>
 
@@ -718,16 +777,19 @@ If this repository helped you, consider giving it a ⭐ and sharing it with othe
 ## 📚 Additional Resources
 
 ### Books
+
 - "Building Intelligent Systems" - Geoff Hulten
 - "Designing Machine Learning Systems" - Chip Huyen
 - "LLM Engineering" - Various authors
 
 ### Courses
+
 - DeepLearning.AI LangChain courses
 - OpenAI API documentation courses
 - Streamlit official tutorials
 
 ### Papers & Research
+
 - "Generalist Agent" - DeepMind
 - "In-Context Learning" - OpenAI
 - "ReAct: Synergizing Reasoning and Acting" - Princeton
