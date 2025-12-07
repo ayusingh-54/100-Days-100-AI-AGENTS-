@@ -1,0 +1,4 @@
+pycryptodomex
+requests
+aiohttp
+user-agent
