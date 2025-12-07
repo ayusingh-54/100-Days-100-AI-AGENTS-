@@ -2,7 +2,6 @@
     "username":"skcdf12_2",
     "password":"abcdefghi",
     "language":"English",
-    "use_proxy": true,
+    "use_proxy": false,
     "group_messages": false
-
 }

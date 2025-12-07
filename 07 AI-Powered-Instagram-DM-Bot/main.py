@@ -2,6 +2,11 @@
 from wezaxy.test import test
 import json
 import asyncio
+import os
+
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv()
 
 async def main():
     while True:

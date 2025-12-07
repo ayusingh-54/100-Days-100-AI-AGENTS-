@@ -12,9 +12,9 @@ async def test(username, password,language,proxy,group_messages):
         if mydata.get('auth') is None:
             lt = login(username, password)
             if lt[0] is True:
-                data = {'auth': lt[1], 'myuserid': str(lt[2])}
+                mydata = {'auth': lt[1], 'myuserid': str(lt[2])}
                 with open(f'{os.path.dirname(os.path.abspath(__file__))}\\Authorization.json', 'w') as fs:
-                    json.dump(data, fs, indent=4)
+                    json.dump(mydata, fs, indent=4)
 
     headers["Authorization"] = f"{mydata.get('auth')}"
     session = aiohttp.ClientSession()
@@ -24,20 +24,33 @@ async def test(username, password,language,proxy,group_messages):
         
 
     async with session.get("https://i.instagram.com/api/v1/direct_v2/inbox/",proxy=proxy, headers=headers, params={"persistentBadging": "true", "use_unified_inbox": "true"})as re:
+        # Handle non-200 responses
+        if re.status != 200:
+            text = await re.text()
+            print(f"Error {re.status}: {text[:200]}")
+            # Try to re-login
+            lt = login(username, password)
+            if lt[0] is True:
+                mydata = {'auth': lt[1], 'myuserid': str(lt[2])}
+                with open(f'{os.path.dirname(os.path.abspath(__file__))}\\Authorization.json', 'w') as fs:
+                    json.dump(mydata, fs, indent=4)
+                print("Re-logged in, please try again")
+            await session.close()
+            return None
+            
         res = await re.json()
         if not res.get('logout_reason') is None:
             lt = login(username, password)
             if lt[0] is True:
-                data = {'auth': lt[1], 'myuserid': str(lt[2])}
+                mydata = {'auth': lt[1], 'myuserid': str(lt[2])}
                 with open(f'{os.path.dirname(os.path.abspath(__file__))}\\Authorization.json', 'w') as fs:
-                    json.dump(data, fs, indent=4)
+                    json.dump(mydata, fs, indent=4)
         if not res.get('is_spam') is None:
             print('your ip is stuck at rate limit try again after 50 seconds')
             time.sleep(50)
 
     if re.status == 200:
-        data = await re.json()
-        threads = data.get("inbox", {}).get("threads", [])
+        threads = res.get("inbox", {}).get("threads", [])
 
         for thread in threads:
             thread_id = thread.get('thread_id')
