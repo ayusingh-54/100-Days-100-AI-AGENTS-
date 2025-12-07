@@ -1,112 +1,285 @@
+<div align="center">
 
-# AI-Powered Instagram DM Bot
+# 🤖 AI-Powered Instagram DM Bot
 
-This project is an **AI-powered Instagram Direct Message (DM) bot** that automatically responds to Instagram DMs using artificial intelligence. It uses GPT models to process and generate responses to the latest DM messages received.
+<img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python">
+<img src="https://img.shields.io/badge/OpenAI-GPT--4o--mini-green.svg" alt="OpenAI">
+<img src="https://img.shields.io/badge/Platform-Instagram-E4405F.svg" alt="Instagram">
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
 
-## Features
+**An intelligent Instagram Direct Message bot that automatically responds to your DMs using OpenAI's GPT-4o-mini, creating natural, human-like conversations.**
 
-- **Automated Direct Messaging**: Automatically reads and replies to Instagram DMs.
-- **AI-Powered Responses**: Uses GPT to generate AI-based replies to messages.
-- **Proxy Support**: Allows the use of proxy servers for safe and anonymous interaction.
-- **Group Message Control**: Optionally enable or disable responses to group messages.
-- **Language Support**: Configure the language of the AI responses.
+[Features](#-features) •
+[Installation](#-installation) •
+[Configuration](#️-configuration) •
+[Usage](#-usage) •
+[How It Works](#-how-it-works) •
+[Disclaimer](#️-disclaimer)
 
-## Prerequisites
+---
 
-Before running the bot, make sure you have the following installed:
+</div>
 
-- Python 3.7 or higher
-- A valid Instagram account (and login credentials)
-- Proxy (optional)
+## 📸 Demo
 
-## Installation
+```
+Message from user: "Hey, what's up?"
+Bot response: "not much, just chilling. you?"
 
-To set up the project, follow these steps:
+Message from user: "How are you doing today?"
+Bot response: "doing pretty good actually! hbu? 😊"
+```
 
-1. **Clone the repository**:
+The bot responds naturally, like a real human texting on Instagram!
 
-   ```bash
-   git clone https://github.com/wezaxy/ai-powered-instagram-dm-bot.git
-   cd ai-powered-instagram-dm-bot
-   ```
+---
 
-2. **Install Dependencies**:
+## ✨ Features
 
-   Run the following command to install the required dependencies:
+| Feature                     | Description                                                        |
+| --------------------------- | ------------------------------------------------------------------ |
+| 🧠 **AI-Powered Responses** | Uses OpenAI GPT-4o-mini for intelligent, context-aware replies     |
+| 💬 **Human-Like Chat**      | Responds casually with natural language, emojis, and texting style |
+| 🔄 **Auto-Reply**           | Continuously monitors and responds to new DMs automatically        |
+| 🌍 **Multi-Language**       | Configure response language (English, Spanish, Hindi, etc.)        |
+| 🔒 **Proxy Support**        | Optional proxy configuration for enhanced privacy                  |
+| 👥 **Group Control**        | Enable/disable responses to group messages                         |
+| ⚡ **Async Performance**    | Built with asyncio for efficient, non-blocking operations          |
+| 🔐 **Secure Auth**          | Encrypted password handling and secure session management          |
 
-   ```bash
-   python install.py
-   ```
+---
 
-   This script will automatically install all the necessary libraries for you.
+## 📁 Project Structure
 
-3. **Create Configuration File**:
+```
+07 AI-Powered-Instagram-DM-Bot/
+├── 📄 main.py                 # Entry point - runs the bot loop
+├── 📄 config.json             # Bot configuration (credentials, settings)
+├── 📄 .env                    # Environment variables (API keys)
+├── 📄 proxies.txt             # Proxy list (optional)
+├── 📄 requirements.txt        # Python dependencies
+├── 📄 install.py              # Dependency installer
+│
+└── 📁 wezaxy/                 # Core bot modules
+    ├── 📄 ai.py               # OpenAI GPT integration
+    ├── 📄 login.py            # Instagram authentication
+    ├── 📄 test.py             # DM monitoring & processing
+    ├── 📄 sendmessage.py      # Message sending handler
+    └── 📄 Authorization.json  # Session token storage
+```
 
-   In the project directory, you'll need to edit the `config.json` file. This file contains the necessary settings for the bot.
+---
 
-   **Example `config.json`**:
+## 🚀 Installation
 
-   ```json
-   {
-     "username": "wezaxyy",
-     "password": "your password",
-     "language": "turkish",
-     "use_proxy": true,
-     "group_messages": false
-   }
-   ```
+### Prerequisites
 
-   - **username**: Your Instagram username.
-   - **password**: Your Instagram password.
-   - **language**: Set the language for AI responses (e.g., "english", "turkish").
-   - **use_proxy**: Set to `true` if you want to use a proxy, otherwise `false`.
-   - **group_messages**: Set to `true` if you want the bot to respond to group messages, otherwise `false`.
+- Python 3.8 or higher
+- OpenAI API Key ([Get one here](https://platform.openai.com/api-keys))
+- Instagram account credentials
 
-4. **Add Proxies (Optional)**:
+### Step 1: Clone the Repository
 
-   If you're using proxies, you should add them in the `proxies.txt` file, one per line, in the following format:
+```bash
+git clone https://github.com/ayusingh-54/100-Days-100-AI-AGENTS-.git
+cd "100-Days-100-AI-AGENTS-/07 AI-Powered-Instagram-DM-Bot"
+```
 
-   ```
-   username:password@proxy_host:proxy_port
-   ```
+### Step 2: Install Dependencies
 
-## Usage
+```bash
+pip install -r requirements.txt
+pip install python-dotenv
+```
 
-Once the setup is complete, you can start the bot by running:
+Or use the installer:
+
+```bash
+python install.py
+```
+
+### Step 3: Set Up Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+---
+
+## ⚙️ Configuration
+
+Edit the `config.json` file with your settings:
+
+```json
+{
+  "username": "your_instagram_username",
+  "password": "your_instagram_password",
+  "language": "English",
+  "use_proxy": false,
+  "group_messages": false
+}
+```
+
+### Configuration Options
+
+| Option           | Type    | Description                                                     |
+| ---------------- | ------- | --------------------------------------------------------------- |
+| `username`       | string  | Your Instagram username                                         |
+| `password`       | string  | Your Instagram password                                         |
+| `language`       | string  | Language for AI responses (e.g., "English", "Spanish", "Hindi") |
+| `use_proxy`      | boolean | Enable proxy usage (`true`/`false`)                             |
+| `group_messages` | boolean | Reply to group DMs (`true`/`false`)                             |
+
+### Proxy Setup (Optional)
+
+If using proxies, add them to `proxies.txt`:
+
+```
+username:password@proxy_host:port
+username:password@proxy_host:port
+```
+
+---
+
+## 🎯 Usage
+
+### Start the Bot
 
 ```bash
 python main.py
 ```
 
-### How the Bot Works
+### Expected Output
 
-- The bot logs into your Instagram account.
-- It checks the latest messages in your Instagram DMs.
-- If the message is from you (the bot owner), it ignores it.
-- If the message is from someone else, it sends the message to an AI model (like GPT).
+```
+Login successful
+Message from 123456789: Hey there!
+message sent successfully
+the last dm message that came in: None
+```
 
-### Key Files:
+### Stop the Bot
 
-- **`install.py`**: Installs required modules and sets up the environment.
-- **`main.py`**: The main bot script that runs the DM response automation.
-- **`config.json`**: Configuration file where you set your Instagram credentials and bot preferences.
-- **`proxies.txt`**: (Optional) A file for proxy settings.
+Press `Ctrl + C` to stop the bot.
 
-## Notes
+---
 
-- This project is intended for educational purposes only. I am not responsible for any issues, account suspensions, or other problems that may occur.
-- Be cautious when using your personal Instagram account with this bot. It’s recommended to use a secondary account.
-- Ensure you comply with Instagram's terms of service to avoid account suspension.
-- The bot can be modified to add more features, such as handling comments or other message types.
+## 🔄 How It Works
 
-## Contact
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│   📱 User sends DM  ──►  🔍 Bot detects  ──►  🧠 OpenAI GPT    │
+│                                                                 │
+│                              ▼                                  │
+│                                                                 │
+│   📤 Bot replies   ◄──  💬 Human-like response generated       │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-For assistance or business inquiries, you can reach me on:
+### Flow:
 
-- **Discord**: wezaxy
-- **Signal**: wezaxy.43
-- **Telegram**: [@wezassy](https://t.me/wezassy)
-https://discord.gg/c44FB4PFcW
-## License
+1. **Authentication**: Bot logs into Instagram using encrypted credentials
+2. **Monitoring**: Continuously polls the DM inbox for new messages
+3. **Processing**: New messages are sent to OpenAI GPT-4o-mini
+4. **Response**: AI generates a casual, human-like reply
+5. **Delivery**: Bot sends the response back to the user
+6. **Loop**: Process repeats every 2 seconds
+
+### AI Personality
+
+The bot is configured to:
+
+- ✅ Use casual, lowercase text
+- ✅ Keep responses short (1-2 sentences)
+- ✅ Include occasional emojis
+- ✅ Match the conversation's energy
+- ❌ Never reveal it's an AI
+- ❌ Avoid formal language or bullet points
+
+---
+
+## 🛡️ Security
+
+| Security Feature    | Implementation                                |
+| ------------------- | --------------------------------------------- |
+| Password Encryption | RSA + AES encryption before transmission      |
+| API Key Protection  | Stored in `.env` file (gitignored)            |
+| Session Management  | Tokens stored locally in `Authorization.json` |
+| Proxy Support       | Optional anonymization layer                  |
+
+---
+
+## 📋 Requirements
+
+```txt
+pycryptodomex    # Password encryption
+requests         # HTTP requests
+aiohttp          # Async HTTP client
+user-agent       # User agent generation
+python-dotenv    # Environment variable loading
+```
+
+---
+
+## ⚠️ Disclaimer
+
+> **⚠️ Important**: This project is for **educational purposes only**.
+
+- 🚫 Using bots may violate Instagram's Terms of Service
+- 🚫 Your account could be rate-limited or suspended
+- ✅ Use a secondary/test account, not your main account
+- ✅ Be responsible and respect others' privacy
+- ✅ The author is not responsible for any misuse or consequences
+
+---
+
+## 🐛 Troubleshooting
+
+| Issue            | Solution                                 |
+| ---------------- | ---------------------------------------- |
+| Login failed     | Check username/password in `config.json` |
+| Rate limited     | Wait 50+ seconds, consider using proxies |
+| OpenAI error     | Verify API key in `.env` file            |
+| Connection reset | Instagram rate limiting - wait and retry |
+| No response      | Check if OpenAI API key has credits      |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+## 👨‍💻 Author
+
+**Ayush Singh**
+
+[![Email](https://img.shields.io/badge/Email-Ayusingh693%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:Ayusingh693@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-ayusingh--54-black?style=for-the-badge&logo=github)](https://github.com/ayusingh-54)
+
+---
+
+⭐ **If you found this helpful, please star the repository!** ⭐
+
+_Part of the **100 Days, 100 AI Agents** Challenge_ 🚀
+
+</div>
