@@ -27,30 +27,30 @@
 ## 🎯 Challenge Progress
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Completed-5%2F100-orange?style=for-the-badge" alt="Progress"/>
+  <img src="https://img.shields.io/badge/Completed-8%2F100-orange?style=for-the-badge" alt="Progress"/>
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status"/>
 </p>
 
 ```
-██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 5/100 (5%)
+████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8/100 (8%)
 ```
 
 ---
 
 ## 📋 Agent Directory
 
-|  #  | Agent Name                 | Description                                                        | Tech Stack                    | Status |                      Link                      |
-| :-: | :------------------------- | :----------------------------------------------------------------- | :---------------------------- | :----: | :--------------------------------------------: |
-| 01  | 🛎️ Customer Support Agent  | Multi-agent support system with query routing & sentiment analysis | LangGraph, OpenAI, Streamlit  |   ✅   | [View](./01_customer_support_agent_langgraph)  |
-| 02  | 🔍 Web Search & Summarizer | Internet search agent with intelligent summarization               | LangChain, DuckDuckGo, OpenAI |   ✅   | [View](./02_search_the_internet_and_summarize) |
-| 03  | 🤖 Chatbot Simulation      | Multi-bot conversation simulator with evaluation metrics           | LangChain, OpenAI, Plotly     |   ✅   |   [View](./03_chatbot-simulation-evaluation)   |
-| 04  | 📝 Information Gatherer    | Structured data extraction using prompt engineering                | OpenAI, Streamlit             |   ✅   |     [View](./information-gather-prompting)     |
-| 05  | 👗 Vibe Matcher            | AI fashion recommender using embeddings & similarity search        | OpenAI Embeddings, Streamlit  |   ✅   |           [View](./vibe-matcher-app)           |
-| 06  | 🔜 Coming Soon             | -                                                                  | -                             |   ⏳   |                       -                        |
-| 07  | 🔜 Coming Soon             | -                                                                  | -                             |   ⏳   |                       -                        |
-| 08  | 🔜 Coming Soon             | -                                                                  | -                             |   ⏳   |                       -                        |
-| 09  | 🔜 Coming Soon             | -                                                                  | -                             |   ⏳   |                       -                        |
-| 10  | 🔜 Coming Soon             | -                                                                  | -                             |   ⏳   |                       -                        |
+|  #  | Agent Name                 | Description                                                        | Tech Stack                        | Status |                      Link                      |
+| :-: | :------------------------- | :----------------------------------------------------------------- | :-------------------------------- | :----: | :--------------------------------------------: |
+| 01  | 🛎️ Customer Support Agent  | Multi-agent support system with query routing & sentiment analysis | LangGraph, OpenAI, Streamlit      |   ✅   | [View](./01_customer_support_agent_langgraph)  |
+| 02  | 🔍 Web Search & Summarizer | Internet search agent with intelligent summarization               | LangChain, DuckDuckGo, OpenAI     |   ✅   | [View](./02_search_the_internet_and_summarize) |
+| 03  | 🤖 Chatbot Simulation      | Multi-bot conversation simulator with evaluation metrics           | LangChain, LangGraph, Plotly      |   ✅   |   [View](./03_chatbot-simulation-evaluation)   |
+| 04  | 📝 AI Prompt Generator     | Structured data extraction using prompt engineering                | LangChain, LangGraph, Streamlit   |   ✅   |  [View](./04%20information-gather-prompting)   |
+| 05  | 👗 Vibe Matcher            | AI fashion recommender using embeddings & similarity search        | OpenAI Embeddings, Scikit-learn   |   ✅   |         [View](./05%20Vibe%20Matcher)          |
+| 06  | 🎯 Lead Generation Agent   | B2B lead finder with scoring, enrichment & Google Maps integration | LangChain, LangGraph, Apify       |   ✅   |         [View](./06%20lead_gen_agent)          |
+| 07  | 📱 Instagram DM Bot        | AI-powered auto-reply bot for Instagram DMs with human-like chat   | OpenAI GPT-4o-mini, Instagram API |   ✅   |   [View](./07%20AI-Powered-Instagram-DM-Bot)   |
+| 08  | 🌐 AutoGen Web Info Agent  | Multi-agent system for web research, stocks & paper analysis       | AutoGen, OpenAI, Streamlit        |   ✅   |      [View](./08_AutoGen_Web_Info_Agent)       |
+| 09  | 🔜 Coming Soon             | -                                                                  | -                                 |   ⏳   |                       -                        |
+| 10  | 🔜 Coming Soon             | -                                                                  | -                                 |   ⏳   |                       -                        |
 
 <details>
 <summary><b>📂 View All 100 Agents (Click to Expand)</b></summary>
@@ -106,14 +106,16 @@ streamlit run app.py
 
 ## 🛠️ Tech Stack
 
-| Category       | Technologies                          |
-| :------------- | :------------------------------------ |
-| **LLMs**       | OpenAI GPT-4, GPT-3.5, Claude         |
-| **Frameworks** | LangChain, LangGraph, AutoGen         |
-| **Embeddings** | OpenAI Ada-002, Sentence Transformers |
-| **Vector DBs** | FAISS, Pinecone, ChromaDB             |
-| **Web UI**     | Streamlit, Gradio                     |
-| **Data**       | Pandas, NumPy, Plotly                 |
+| Category       | Technologies                                  |
+| :------------- | :-------------------------------------------- |
+| **LLMs**       | OpenAI GPT-4, GPT-4o-mini, GPT-3.5            |
+| **Frameworks** | LangChain, LangGraph, AutoGen                 |
+| **Embeddings** | OpenAI Ada-002, Sentence Transformers         |
+| **Vector DBs** | FAISS, Pinecone, ChromaDB                     |
+| **Web UI**     | Streamlit, Gradio                             |
+| **Data**       | Pandas, NumPy, Plotly, Scikit-learn           |
+| **APIs**       | Instagram API, Google Maps, DuckDuckGo, Apify |
+| **Async**      | aiohttp, asyncio                              |
 
 ---
 
@@ -122,10 +124,11 @@ streamlit run app.py
 | Category                      | Count | Agents      |
 | :---------------------------- | :---: | :---------- |
 | 🛎️ **Customer Service**       |   1   | #01         |
-| 🔍 **Search & Research**      |   1   | #02         |
-| 🤖 **Chatbots & Simulation**  |   1   | #03         |
+| 🔍 **Search & Research**      |   2   | #02, #08    |
+| 🤖 **Chatbots & Simulation**  |   2   | #03, #07    |
 | 📝 **Data Extraction**        |   1   | #04         |
 | 🛒 **Recommendation Systems** |   1   | #05         |
+| 💼 **Sales & Lead Gen**       |   1   | #06         |
 | 📧 **Email & Communication**  |   0   | Coming Soon |
 | 💰 **Finance & Trading**      |   0   | Coming Soon |
 | 📚 **Education & Learning**   |   0   | Coming Soon |
